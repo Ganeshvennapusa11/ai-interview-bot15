@@ -120,7 +120,7 @@ export default function Dashboard() {
           placeholder="Search roles (e.g. Frontend, DevOps)..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-12 pr-4 py-3 rounded-xl border border-white/10 focus:ring-2 focus:ring-blue-400 outline-none text-white shadow-lg bg-white/10 backdrop-blur-md placeholder-gray-400/80 transition-all"
+          className="w-full pl-12 pr-4 py-3 rounded-xl border border-white/10 focus:ring-2 focus:ring-blue-400 outline-none text-white shadow-lg bg-black/60 backdrop-blur-xl placeholder-gray-400/80 transition-all"
         />
         <Search
           className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300"
@@ -129,7 +129,7 @@ export default function Dashboard() {
       </div>
 
       {/* Role Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {filteredRoles.map((role, index) => (
           <motion.div
             key={role.id + index}
@@ -137,7 +137,7 @@ export default function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.06, duration: 0.45 }}
             whileHover={{ scale: 1.02 }}
-            className={`cursor-pointer bg-gradient-to-br ${role.color} border border-white/10 rounded-2xl p-6 shadow-xl backdrop-blur-md hover:shadow-2xl hover:border-white/30 transition-all flex flex-col justify-between min-h-[220px]`}
+            className={`cursor-pointer bg-black/60 bg-gradient-to-br ${role.color} border border-white/10 rounded-2xl p-6 shadow-xl backdrop-blur-xl hover:shadow-2xl hover:border-white/30 transition-all flex flex-col justify-between min-h-[220px]`}
             // ✅ Navigate to UploadResume
             onClick={() =>
               navigate(`/uploadresume/${encodeURIComponent(role.title)}`, {

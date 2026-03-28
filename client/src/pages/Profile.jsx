@@ -80,7 +80,7 @@ export default function Profile() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-8"
+        className="w-full max-w-3xl bg-black/70 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-8"
       >
         <div className="flex items-center gap-6 mb-6">
           <img

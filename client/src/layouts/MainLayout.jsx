@@ -13,8 +13,8 @@ import {
   X,
 } from "lucide-react";
 
-// ⭐ Import your new 21st.dev component
-import AnoAI from "@/components/ui/animated-shader-background";
+// ⭐ Import the selected Cybercore background from 21st.dev
+import CybercoreBackground from "@/components/ui/cybercore-section-hero";
 
 // ⬆️ Change name if your file is different
 
@@ -44,16 +44,16 @@ export default function MainLayout() {
   ];
 
   return (
-    <div className="min-h-screen flex text-gray-100 relative overflow-hidden bg-black">
+    <div className="min-h-screen flex text-gray-100 relative overflow-hidden bg-[#000308]">
       {/* Background Component */}
-      <AnoAI />
+      <CybercoreBackground beamCount={70} />
 
       {/* Sidebar */}
       <motion.aside
         variants={sidebarVariants}
         animate={isCollapsed ? "collapsed" : "expanded"}
         transition={{ duration: 0.4 }}
-        className="relative z-20 flex flex-col justify-between fixed left-0 top-0 bottom-0 border-r border-white/10 bg-black/20 backdrop-blur-md shadow-2xl"
+        className="relative z-20 flex flex-col justify-between fixed left-0 top-0 bottom-0 border-r border-white/10 bg-black/60 backdrop-blur-md shadow-2xl"
       >
         <div>
           <div
@@ -124,7 +124,7 @@ export default function MainLayout() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className={`flex-1 min-h-screen relative z-10 ${isCollapsed ? "ml-20 mr-20" : "ml-64 mr-64"
+        className={`flex-1 min-h-screen relative z-10 ${isCollapsed ? "ml-20" : "ml-64"
           } transition-all duration-500 overflow-y-auto`}
       >
         <div className="p-8">
